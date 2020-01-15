@@ -1,131 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>best-wishes</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: Raleway, sans-serif
+    }
+    
+    footer,
+    header,
+    section {
+        display: block
+    }
+    
+    main {
+        display: block
+    }
+    
+    a {
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects
+    }
+    
+    video {
+        display: inline-block
+    }
+    
+    img {
+        border-style: none
+    }
+    
+    svg:not(:root) {
+        overflow: hidden
+    }
+    
+    [type=reset],
+    [type=submit],
+    html [type=button] {
+        -webkit-appearance: button
+    }
+    
+    [type=button]::-moz-focus-inner,
+    [type=reset]::-moz-focus-inner,
+    [type=submit]::-moz-focus-inner {
+        border-style: none;
+        padding: 0
+    }
+    
+    [type=button]:-moz-focusring,
+    [type=reset]:-moz-focusring,
+    [type=submit]:-moz-focusring {
+        outline: 1px dotted ButtonText
+    }
+    
+    [type=checkbox],
+    [type=radio] {
+        box-sizing: border-box;
+        padding: 0
+    }
+    
+    [type=number]::-webkit-inner-spin-button,
+    [type=number]::-webkit-outer-spin-button {
+        height: auto
+    }
+    
+    [type=search] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px
+    }
+    
+    [type=search]::-webkit-search-cancel-button,
+    [type=search]::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+    
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+    }
+    
+    [hidden] {
+        display: none
+    }
+    
+    html {
+        box-sizing: border-box
+    }
+    
+    *,
+    :after,
+    :before {
+        box-sizing: inherit
+    }
+    
+    body {
+        background: #fff;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased
+    }
+    
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle
+    }
+    
+    figure {
+        margin: 24px 0
+    }
+    
+    table {
+        border-collapse: collapse;
+        margin-bottom: 24px;
+        width: 100%
+    }
+    
+    html {
+        font-size: 18px;
+        line-height: 27px
+    }
+    
+    @media (min-width:641px) {
+        html {
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: -.1px
+        }
+    }
+    
+    body {
+        color: #5b6f82;
+        font-size: 1rem
+    }
+    
+    body {
+        font-family: Raleway, sans-serif
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: underline
+    }
+    
+    a:active,
+    a:hover {
+        outline: 0;
+        text-decoration: none
+    }
+    
+    .text-light {
+        color: rgba(255, 255, 255, .8)
+    }
+    
+    .text-light a {
+        color: rgba(255, 255, 255, .8)
+    }
+    
+    .text-sm {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: -.1px
+    }
+    
+    p {
+        margin-top: 0;
+        margin-bottom: 24px
+    }
+    
+    .container,
+    .container-sm {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px
+    }
+    
+    @media (min-width:481px) {
+        .container,
+        .container-sm {
+            padding-left: 24px;
+            padding-right: 24px
+        }
+    }
+    
+    .container {
+        max-width: 1126px
+    }
+    
+    .container-sm {
+        max-width: 848px
+    }
+    
+    .container .container-sm {
+        max-width: 800px;
+        padding-left: 0;
+        padding-right: 0
+    }
+    
+    .text-center {
+        text-align: center
+    }
+    
+    .has-top-divider {
+        position: relative
+    }
+    
+    .has-top-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        background: #e3e7eb;
+        background: linear-gradient(to right, rgba(227, 231, 235, .1) 0, rgba(227, 231, 235, .6) 50%, rgba(227, 231, 235, .1) 100%)
+    }
+    
+    .has-bottom-divider {
+        position: relative
+    }
+    
+    .has-bottom-divider::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 1px;
+        background: #e3e7eb;
+        background: linear-gradient(to right, rgba(227, 231, 235, .1) 0, rgba(227, 231, 235, .6) 50%, rgba(227, 231, 235, .1) 100%)
+    }
+    
+    .site-header {
+        position: relative;
+        padding: 50px 0
+    }
+    
+    .footer-text {
+        text-align: right
+    }
+    
+    .site-header-inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    
+    @media (min-width:641px) {
+        .site-header::before {
+            height: 640px
+        }
+    }
+    
+    .hero {
+        position: relative;
+        overflow: hidden
+    }
+    
+    .hero-paragraph {
+        margin-bottom: 32px
+    }
+    
+    .hero-media {
+        position: relative;
+        height: 200px;
+        margin-top: 40px;
+        border-radius: 4px 4px 0 0
+    }
+    
+    .hero-media-container {
+        position: relative;
+        height: 10%;
+        margin-top: 0;
+        background: #000;
+        border-radius: 4px 4px 0 0
+    }
+    
+    .hero-media::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 16px 18px #000;
+        mix-blend-mode: multiply
+    }
+    
+    @supports (-ms-ime-align:auto) {
+        .hero-media::before {
+            box-shadow: 0 16px 48px rgba(32, 43, 54, .12)
+        }
+    }
+    
+    @media (min-width:641px) {
+        .hero-paragraph {
+            margin-bottom: 40px;
+            padding-left: 72px;
+            padding-right: 72px
+        }
+        .hero-media {
+            margin-top: 4px;
+            height: 100%
+        }
+    }
+    
+    .features .section-title {
+        margin-bottom: 48px
+    }
+    
+    .features-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: -12px;
+        margin-left: -12px
+    }
+    
+    .features-wrap:first-child {
+        margin-top: -12px
+    }
+    
+    .features-wrap:last-child {
+        margin-bottom: -12px
+    }
+    
+    .feature {
+        padding: 0;
+        width: 276px;
+        height: 276px;
+        max-width: 276px;
+        flex-grow: 1
+    }
+    
+    .feature-inner {
+        position: relative;
+        height: 100%;
+        background: #fff;
+        padding: 40px 24px
+    }
+    
+    .feature-inner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 16px 48px #e3e7eb;
+        mix-blend-mode: multiply
+    }
+    
+    @supports (-ms-ime-align:auto) {
+        .feature-inner::before {
+            box-shadow: 0 16px 48px rgba(32, 43, 54, .12)
+        }
+    }
+    
+    @media (min-width:641px) {
+        .features .section-title {
+            margin-bottom: 56px
+        }
+        .features .section-inner {
+            padding-top: 56px;
+            padding-bottom: 64px
+        }
+    }
+    
+    .feature-extended {
+        padding-top: 48px
+    }
+    
+    .feature-extended-body,
+    .feature-extended-image {
+        width: 100%
+    }
+    
+    .feature-extended-image {
+        margin-bottom: 24px
+    }
+    
+    .feature-extended-image img,
+    .feature-extended-image svg {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        overflow: visible
+    }
+    
+    .feature-extended-body {
+        text-align: center
+    }
+    
+    @media (min-width:641px) {
+        .features-extended .section-paragraph {
+            padding-left: 72px;
+            padding-right: 72px;
+            margin-bottom: 0
+        }
+        .feature-extended {
+            display: flex;
+            align-items: center;
+            padding-top: 72px
+        }
+        .feature-extended:nth-child(even) .feature-extended-image {
+            order: 1
+        }
+        .feature-extended-body,
+        .feature-extended-image {
+            width: auto;
+            padding: 0 24px
+        }
+        .feature-extended-image {
+            margin-bottom: 0
+        }
+        .feature-extended-image img,
+        .feature-extended-image svg {
+            max-width: none;
+            width: 320px
+        }
+        .feature-extended-body {
+            text-align: left
+        }
+    }
+    
+    @media (min-width:1025px) {
+        .feature-extended {
+            padding-left: 40px;
+            padding-right: 40px
+        }
+        .feature-extended-body,
+        .feature-extended-image {
+            padding: 0 40px
+        }
+        .feature-extended-image img,
+        .feature-extended-image svg {
+            width: 480px
+        }
+    }
+    
+    .pricing {
+        position: relative;
+        overflow: hidden
+    }
+    
+    .pricing::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 640px;
+        background: #f6f8fa;
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-transform: skewY(-40deg);
+        transform: skewY(-40deg);
+        overflow: hidden
+    }
+    
+    .pricing .section-title {
+        margin-bottom: 48px
+    }
+    
+    .pricing-table {
+        padding: 12px;
+        width: 344px;
+        max-width: 344px;
+        flex-grow: 1
+    }
+    
+    .pricing-table-inner {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        padding: 24px;
+        height: 100%
+    }
+    
+    .pricing-table-inner>* {
+        position: relative;
+        width: 100%
+    }
+    
+    .pricing-table-inner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 16px 48px #e3e7eb;
+        mix-blend-mode: multiply
+    }
+    
+    @supports (-ms-ime-align:auto) {
+        .pricing-table-inner::before {
+            box-shadow: 0 16px 48px rgba(32, 43, 54, .12)
+        }
+    }
+    
+    .pricing-table-header {
+        position: relative
+    }
+    
+    .pricing-table-header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 1px;
+        background: #e3e7eb;
+        background: linear-gradient(to right, rgba(227, 231, 235, .1) 0, rgba(227, 231, 235, .6) 50%, rgba(227, 231, 235, .1) 100%)
+    }
+    
+    .pricing-table-features {
+        color: #92a2b1
+    }
+    
+    .pricing-table-cta {
+        align-self: flex-end
+    }
+    
+    @media (min-width:641px) {
+        .pricing::before {
+            -webkit-transform: skewY(-12deg);
+            transform: skewY(-12deg)
+        }
+        .pricing .section-title {
+            margin-bottom: 64px
+        }
+    }
+    
+    .body-wrap {
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh
+    }
+    
+    .boxed-container1 {
+        background-image: url(lp_images/clouds_7.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        max-width: 100%
+    }
+    
+    @supports (-ms-ime-align:auto) {
+        .boxed-container {
+            box-shadow: 0 16px 48px rgba(32, 43, 54, .12)
+        }
+    }
+    
+    main {
+        flex: 1 0 auto
+    }
+    
+    .section-inner {
+        position: relative;
+        padding-top: 48px;
+        padding-bottom: 48px
+    }
+    
+    @media (min-width:641px) {
+        .section-inner {
+            padding-top: 80px;
+            padding-bottom: 80px
+        }
+    }
+    
+    .site-footer {
+        background-color: #010ad8;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: #fff
+    }
+    
+    .site-footer a {
+        color: #fff;
+        text-decoration: none
+    }
+    
+    .site-footer a:active,
+    .site-footer a:hover {
+        color: #fff;
+        text-decoration: underline
+    }
+    
+    .site-footer-inner {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+    
+    .footer-brand,
+    .footer-copyright {
+        flex: none;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        text-align: right
+    }
+    
+    .footer-brand {
+        margin-bottom: 0
+    }
+    
+    @media (min-width:641px) {
+        .site-footer-inner {
+            justify-content: space-between
+        }
+        .footer-brand,
+        .footer-copyright {
+            flex: 100%;
+            vertical-align: middle
+        }
+        .footer-brand,
+        .footer-copyright {
+            justify-content: center
+        }
+    }
+</style>
 
 <body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
-        <header class="site-header">
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                       <figure><img src="images/logo-presentation-matters.svg" width="100px" alt=""></figure>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <section class="hero text-light text-center">
-                <div class="container-sm">
-                <div class="hero-media">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/glHtYwHidUY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-<!--
-                    <div class="hero-inner">
-                        <div class="hero-media">
-                          <video class="hero-media-container" autoplay="" muted="" loop="" id="videopm">
-                <source src="" type="video/mp4">
-          </video>
-                        
-                        </div>
-                    </div>
--->
-                </div>
-            </section>
-
-            
-
-            <section class="features section text-center">
+    <div class="body-wrap">
+        <div class="boxed-container1">
+            <header class="site-header">
                 <div class="container">
-                    <div class="features-inner section-inner has-top-divider">
-                       
-                        <div class="features-wrap">
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                             <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                            <div class="feature is-revealing">
-                               <figure><img src="https://dummyimage.com/276x276/000/fff" alt=""></figure>
-                            </div>
-                           
+                    <div class="site-header-inner">
+                        <div class="brand header-brand">
+                            <figure><img src="http://presentation-matters.com/img/logo-default.svg" width="150" alt="presentation matters logo"></figure>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="site-footer-inner">
-                    <div class="brand footer-brand">
-                        <a href="#">
-                            <figure>
-                            <img src="./images/logo-footer.svg" width="80" alt="">
-                            </figure>
-                        </a>
+            </header>
+            <main>
+                <section class="hero text-light text-center">
+                    <div class="container-sm">
+                        <div class="">
+                            <iframe width="600" height="375" src="https://www.youtube.com/embed/m-aXeXPesHo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
-                    <ul class="footer-social-links list-reset">
-                        <li>
+                </section>
+                <section class="features section text-center">
+                    <div class="container">
+                        <div class="features-inner section-inner has-top-divider">
+                            <div class="features-wrap">
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-1.jpg" width="250" alt=""></figure>
+                                </div>
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-2.jpg" width="250" alt=""></figure>
+                                </div>
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-3.jpg" width="250" alt=""></figure>
+                                </div>
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-4.jpg" width="250" alt=""></figure>
+                                </div>
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-5.jpg" width="250" alt=""></figure>
+                                </div>
+                                <div class="feature">
+                                    <figure><img src="lp_images/best-wishes-6.jpg" width="250" alt=""></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="site-footer-inner">
+                        <div class="brand footer-brand">
                             <a href="#">
-                                <span class="screen-reader-text">Linkdn</span>
-                                
+                                <figure>
+                                    <a href="http://presentation-matters.com/" target="_blank"><img src="lp_images/pm_logo_2.png" width="40" alt="Presentation Matters logo"></a>
+                                </figure>
                             </a>
-                        </li>
-                    </ul>
-                    <div class="footer-copyright">&copy; Copyright 2020. All Rights Reserved.
+                        </div>
+                        <div class="footer-copyright"><a href="mailto:yves@presentation-matters.com">yves@presentation-matters.com</a>
+                        </div>
+                        <div class="footer-copyright"><a href="tel:+15143166860">+1 (514) 316 6860</a>
+                        </div>
+                        <div class="footer-copyright">&copy; Copyright 2020. All Rights Reserved.
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
+    <script src="dist/js/main.min.js"></script>
     <script>
-      !function() {
-    const e=document.documentElement;
-    if(e.classList.remove("no-js"), e.classList.add("js"), document.body.classList.contains("has-animations")) {
-        const e=window.sr=ScrollReveal();
-        e.reveal(".hero-title, .hero-paragraph, .hero-cta", {
-            duration: 1e3, distance: "40px", easing: "cubic-bezier(0.5, -0.01, 0, 1.005)", origin: "bottom", interval: 150
+        ! function() {
+            const e = document.documentElement;
+            if (e.classList.remove("no-js"), e.classList.add("js"), document.body.classList.contains("has-animations")) {
+                const e = window.sr = ScrollReveal();
+                e.reveal(".hero-title, .hero-paragraph, .hero-cta", {
+                        duration: 1e3,
+                        distance: "40px",
+                        easing: "cubic-bezier(0.5, -0.01, 0, 1.005)",
+                        origin: "bottom",
+                        interval: 150
+                    }),
+                    e.reveal(".feature, .pricing-table", {
+                        duration: 600,
+                        distance: "40px",
+                        easing: "cubic-bezier(0.5, -0.01, 0, 1.005)",
+                        interval: 100,
+                        origin: "bottom",
+                        viewFactor: .5
+                    }),
+                    e.reveal(".feature-extended-image", {
+                        duration: 600,
+                        scale: .9,
+                        easing: "cubic-bezier(0.5, -0.01, 0, 1.005)",
+                        viewFactor: .5
+                    })
+            }
         }
-        ),
-        e.reveal(".feature, .pricing-table", {
-            duration: 600, distance: "40px", easing: "cubic-bezier(0.5, -0.01, 0, 1.005)", interval: 100, origin: "bottom", viewFactor: .5
-        }
-        ),
-        e.reveal(".feature-extended-image", {
-            duration: 600, scale: .9, easing: "cubic-bezier(0.5, -0.01, 0, 1.005)", viewFactor: .5
-        }
-        )
-    }
-}
 
-();
-    
+        ();
     </script>
 </body>
+
 </html>
